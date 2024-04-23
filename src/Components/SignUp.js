@@ -11,7 +11,7 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ const SignUp = () => {
       const auth = getAuth();
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       console.log(userCredential.user);
-      navigate('/login'); // Redirect to login page after successful signup
+      navigate('/login'); 
     } catch (error) {
       setError(error.message);
       console.error(error);
@@ -27,7 +27,7 @@ const SignUp = () => {
   };
 
   return (
-<>
+<div className='signup-container'>
 
 
     <div className="sign-up-form">
@@ -71,7 +71,7 @@ const SignUp = () => {
         <p>I have an account? <Link to="/login">LogIn</Link></p>
       </div>
     </div>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Home.css'; // Import CSS file for component styles
+import './Home.css'; 
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -52,8 +52,8 @@ function Home() {
                             </div>
                       
                             <div className="movie-details">
-                            <h2 className='title'>{movie.title}</h2>
-                            <p className='overview'>{movie.overview}</p>
+                           
+                            
                             </div>
                             <p className="signup-info">For more details, <Link to="/signup">sign up</Link> first.</p>
 

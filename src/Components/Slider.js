@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Slider.css'; // Import CSS file for component styles
-
+import './Slider.css'; 
 function Slider() {
     const [movies, setMovies] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        // Fetch upcoming movies from TMDB API
+        
         axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=514c4eb76541f582e99225349b5dcb2c')
             .then(response => {
                 setMovies(response.data.results);

@@ -5,17 +5,19 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(to right, #6a89cc, #37d5d6);
 }
 
 .login-form {
   width: 350px;
   padding: 40px;
   border-radius: 10px;
-  background-color: #f3f3f3; /* Light gray background */
+  background-color: #e6e6e6; /* Light gray background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
+/* Gradient overlay for a modern look */
 .login-form:before {
   content: "";
   position: absolute;
@@ -23,7 +25,7 @@
   left: -10px;
   right: -10px;
   bottom: -10px;
-  background: linear-gradient(to right, #4a148c, #880e4f); /* Gradient background */
+  background: linear-gradient(to right, #5a6785, #7ed5d5); /* Gradient color */
   border-radius: 10px;
   z-index: -1;
 }
@@ -36,28 +38,27 @@
 
 .login-form input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ced4da;
   border-radius: 5px;
   font-size: 16px;
-  background-color: #f9f9f9; /* Light gray input background */
+  background-color: #ffffff; /* White input background */
 }
 
 .login-form button {
   content: "";
-  
   top: -10px;
   left: -10px;
   right: -10px;
   bottom: -10px;
-  background: linear-gradient(to right, #af9bc7, #880e4f); /* Gradient background */
+  background: linear-gradient(to right, #4a69bd, #3b5998); /* Gradient color */
   border-radius: 8px;
   z-index: -1;
 }
 
 .login-form button:hover {
-  background-color: #3b880e; /* Darker purple on hover */
+  background-color: #2c3e50; /* Darker blue on hover */
 }
 
 .error-message {
