@@ -1,0 +1,166 @@
+/* Slider Container */
+.slider-container {
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  /* Slider Title */
+  .slider-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  
+  .slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .slider-slide {
+    display: none;
+    width: 100%;
+    height: 800px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.5s ease;
+  }
+  
+  
+  .slider-slide.active {
+    display: block;
+  }
+  
+  
+  .movie-details {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .slider-arrow {
+    position: absolute;
+   
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  
+  .slider-arrow.prev {
+    left: 10px;
+  }
+  
+  
+  .slider-arrow.next {
+    right: 10px;
+  }
+  .slider-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+  }
+  /* Button styling */
+.btn {
+  display: flex;
+  float: right;
+  margin-right: 60px;
+  text-decoration: none; /* Remove underline */
+  outline: none;
+}
+a:link { 
+  text-decoration: none; 
+} 
+
+/* Unique color for Signup button */
+.signup {
+  text-decoration: none;
+  background-color: #e5989b; /* Coral */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smooth color change */
+}
+
+/* Unique color for Login button */
+.login {
+  background-color: #e5989b; /* Cornflower blue */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smooth color change */
+}
+
+/* Hover effect for Signup button */
+.signup:hover {
+  background-color: #ff6347; /* Tomato */
+}
+
+/* Hover effect for Login button */
+.login:hover {
+  background-color: #4169e1; /* Royal blue */
+}
+
+  .title{
+font-size: 40px;
+justify-content: center;
+  }
+  .overview{
+    font-size: 20px;
+    font-weight: 400;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-info {
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 200px; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+  }

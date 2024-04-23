@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.notfound {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  margin-top: 50px;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.movie-card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.btn {
+  width: 70px;
+  height: 40px;
+  margin-top: 20px; /* Adjust as needed */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Change to column layout on smaller screens */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .movie-card-container {
+    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    padding: 10px; /* Add padding for better spacing */
+  }
+  
+  .btn {
+    margin-top: 10px; /* Reduce margin-top for smaller screens */
+  }
+}
