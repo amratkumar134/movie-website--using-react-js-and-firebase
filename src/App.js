@@ -2,7 +2,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from './Components/Main';
-// Import the functions you need from the SDKs you need
+
 import Login from './Components/Login';
 import SignUp from './Components/SignUp';
 import Home from './Components/Home';

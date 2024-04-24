@@ -9,6 +9,7 @@ const Main = () => {
   const [categoryData, setCategoryData] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState({});
+  const [searchResults, setSearchResults] = useState([]);
 
   const [url, setUrl] = useState({
     Action:
@@ -52,17 +53,7 @@ const Main = () => {
       const searchResponse = await fetch(newUrl);
       const searchData = await searchResponse.json();
 
-      const newCategoryData = {};
-      const newTotalPages = {};
-
-      for (const category of categories) {
-        newCategoryData[category] = searchData.results;
-        newTotalPages[category] = searchData.total_pages;
-      }
-
-      setCategoryData(newCategoryData);
-      setTotalPages(newTotalPages);
-      setCurrentPage(1);
+      setSearchResults(searchData.results);
     } catch (error) {
       console.error("Error fetching search results:", error);
     }
@@ -94,24 +85,31 @@ const Main = () => {
       <Slider />
 
       <div className="container">
-        {categories.map((category, categoryIndex) => (
-          <div key={categoryIndex} id={category}>
-            <h2>{category}</h2>
+        {searchResults.length > 0 ? (
+          <div id="search-results">
+            <h2>Search Results</h2>
             <div className="movie-card-list">
-              {categoryData[category]?.length === 0 ? (
-                <p className="notfound">Not Found</p>
-              ) : (
-                <>
-                  <div className="movie-card-container">
-                    {categoryData[category]?.map((movie, movieIndex) => (
-                      <MovieCard key={movieIndex} info={movie} />
-                    ))}
-                  </div>
-                </>
-              )}
+              <div className="movie-card-container">
+                {searchResults.map((movie, index) => (
+                  <MovieCard key={index} info={movie} />
+                ))}
+              </div>
             </div>
           </div>
-        ))}
+        ) : (
+          categories.map((category, categoryIndex) => (
+            <div key={categoryIndex} id={category}>
+              <h2>{category}</h2>
+              <div className="movie-card-list">
+                <div className="movie-card-container">
+                  {categoryData[category]?.map((movie, movieIndex) => (
+                    <MovieCard key={movieIndex} info={movie} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))
+        )}
       </div>
 
       <div className="pagination">
